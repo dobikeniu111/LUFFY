@@ -1,1 +1,1 @@
-$(cat /workspace/README.md)
+$(cat /workspace/README.md | head -c 30000)
