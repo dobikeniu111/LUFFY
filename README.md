@@ -38,16 +38,16 @@ LUFFY/
 - ✅ Data processing batch dimension operations completed (fold/unfold batch dim fully implemented)
 
 
-## 📝 Complete TODO List
+### 📝 Complete TODO List
 
-### 🔴 High Priority TODOs (Ordered by file path ascending, line numbers increasing)
+#### 🔴 High Priority TODOs (Ordered by file path ascending, line numbers increasing)
 
-#### eval_scripts/oat_math_grader.py
+##### eval_scripts/oat_math_grader.py
 - ⚠️ HACK: ing. (line 1023)
 - ⚠️ HACK: ing. (line 1048)
 - ⚠️ HACK: ing. (line 1075)
 
-#### luffy/deepscaler/utils.py
+##### luffy/deepscaler/utils.py
 - ⏳ TODO: Add logging for API calls and errors (line 45)
 - ⏳ TODO: Support batch processing for multiple prompts (line 46)
 - ⏳ TODO: Add timeout configuration for API calls (line 47)
@@ -60,10 +60,10 @@ LUFFY/
 - ⏳ TODO: Implement response validation and text extraction (line 113)
 - ⏳ TODO: Add support for different generation configurations (line 114)
 
-#### luffy/test.py
+##### luffy/test.py
 - ⏳ TODO: add smaller page sizes when https://github.com/Dao-AILab/flash-attention/pull/824 is merged (line 1590)
 
-#### luffy/verl/verl/protocol.py
+##### luffy/verl/verl/protocol.py
 - ✅ fold_batch_dim/unfold_batch_dim implemented (lines 112+)
 - ⏳ TODO: Optimize memory usage during tensor reshaping (line 114)
 - ⏳ TODO: Add support for different tensor types and shapes (line 115)
@@ -73,7 +73,7 @@ LUFFY/
 - ⏳ TODO: we can actually lift this restriction if needed (line 265)
 - ⏳ TODO: (zhangchi.usc1992) whether to copy (line 351)
 
-#### luffy/verl/verl/trainer/fsdp_sft_trainer.py
+##### luffy/verl/verl/trainer/fsdp_sft_trainer.py
 - ⏳ TODO: (zhangchi.usc1992) (line 16)
 - ⏳ TODO: add checkpoint manager (line 77)
 - ⏳ TODO: (zhangchi.usc1992): (line 140)
@@ -94,7 +94,7 @@ LUFFY/
 - ⏳ TODO: add a unified tracking (line 301)
 - ⏳ TODO: (zhangchi.usc1992) add back checkpoint manager. Currently, it blocks when uploading to hdfs. So very slow. (line 318)
 
-#### luffy/verl/verl/trainer/main_ppo.py
+##### luffy/verl/verl/trainer/main_ppo.py
 - ⏳ TODO: Implement reward computation for different data sources (line 50)
 - ⏳ TODO: Add support for parallel processing of reward computation (line 53)
 - ⏳ TODO: Implement proper sequence decoding and validation (line 54)
@@ -107,6 +107,6 @@ LUFFY/
 - ⏳ TODO: Implement batch-wise reward computation (line 70)
 - ⏳ TODO: Add proper error handling and validation (line 71)
 
-### ✅ Already Completed Items
+#### ✅ Already Completed Items
 - ✅ **OpenAI API Integration**: Full client initialization with exponential backoff retry logic (luffy/deepscaler/utils.py)
 - ✅ **Batch Dimension Operations**: fold_batch_dim/unfold_batch_dim fully implemented (luffy/verl/verl/protocol.py)
