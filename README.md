@@ -40,60 +40,73 @@ LUFFY/
 
 ## 📝 Complete TODO List
 
-### 🔴 High Priority TODOs
+### 🔴 High Priority TODOs (Ordered by file path ascending, line numbers increasing)
 
-- ✅ **API Integration**: OpenAI API implementation completed (with exponential backoff retry logic)
-  * ✅ Full client initialization and API calls implemented
-  * ✅ Exponential backoff retry logic added
-  * ⏳ Remaining: 
-    - Add logging for API calls and errors
-    - Support batch processing for multiple prompts
-    - Add timeout configuration for API calls
-    - Gemini API (Vertex AI) full implementation
+#### eval_scripts/oat_math_grader.py
+- ⚠️ HACK: ing. (line 1023)
+- ⚠️ HACK: ing. (line 1048)
+- ⚠️ HACK: ing. (line 1075)
 
-- **Reward System / PPO Training**: Parallel processing and validation for reward computation  
-  * ⏳ Remaining:
-    - Implement reward computation for different data sources
-    - Add support for parallel processing of reward computation
-    - Implement proper sequence decoding and validation
-    - Add thread-safe logging and debugging functionality
-    - Optimize memory usage for large batch processing
-    - Extract and validate prompt and response sequences
-    - Decode sequences to text format
-    - Apply appropriate reward function based on data source
-    - Handle edge cases and error conditions
-    - Implement batch-wise reward computation
-    - Add proper error handling and validation
+#### luffy/deepscaler/utils.py
+- ⏳ TODO: Add logging for API calls and errors (line 45)
+- ⏳ TODO: Support batch processing for multiple prompts (line 46)
+- ⏳ TODO: Add timeout configuration for API calls (line 47)
+- ⏳ TODO: Implement Vertex AI initialization and authentication (line 107)
+- ⏳ TODO: Configure safety settings for content generation (line 108)
+- ⏳ TODO: Set up GenerativeModel with proper system instructions (line 109)
+- ⏳ TODO: Implement retry logic with exponential backoff (line 110)
+- ⏳ TODO: Add comprehensive error handling for API access issues (line 111)
+- ⏳ TODO: Handle rate limiting and quota management (line 112)
+- ⏳ TODO: Implement response validation and text extraction (line 113)
+- ⏳ TODO: Add support for different generation configurations (line 114)
 
-- **FSDP Training**: Model loading and distributed training setup
-  * ⏳ Remaining:
-    - Implement model loading with proper initialization context
-    - Add support for different model types and configurations
-    - Implement memory-efficient model loading for large models
-    - Add model validation and compatibility checks
-    - Complete model loading implementation
-    - Add support for custom model architectures
-    - Implement proper dtype and attention configuration
-    - Implement gradient checkpointing configuration
-    - Add memory usage optimization strategies
-    - Configure mixed precision training settings
-    - Implement FSDP sharding and wrapping policies
-    - Add CPU offloading configuration for memory optimization
-    - Set up distributed training parameters properly
-    - Initialize FSDP wrapped model
-    - Add checkpoint manager (currently blocked on HDFS upload slowness)
+#### luffy/test.py
+- ⏳ TODO: add smaller page sizes when https://github.com/Dao-AILab/flash-attention/pull/824 is merged (line 1590)
 
-- ✅ **Data Processing**: Batch dimension operations (fold_batch_dim/unfold_batch_dim) completed
-  * ✅ Restored complete batch dimension handling functionality
-  * ⏳ Remaining:
-    - Optimize memory usage during tensor reshaping
-    - Add support for different tensor types and shapes
-    - Optimize tensor view operations for performance
-    - Add error handling for invalid batch dimensions
-    - Additional optimization improvements for batch handling
+#### luffy/verl/verl/protocol.py
+- ✅ fold_batch_dim/unfold_batch_dim implemented (lines 112+)
+- ⏳ TODO: Optimize memory usage during tensor reshaping (line 114)
+- ⏳ TODO: Add support for different tensor types and shapes (line 115)
+- ⏳ TODO: Optimize tensor view operations for performance (line 136)
+- ⏳ TODO: Add error handling for invalid batch dimensions (line 137)
+- ⏳ TODO: (zhangchi.usc1992) add consistency check (line 169)
+- ⏳ TODO: we can actually lift this restriction if needed (line 265)
+- ⏳ TODO: (zhangchi.usc1992) whether to copy (line 351)
 
-### 🟡 Other TODOs (Lower Priority)
+#### luffy/verl/verl/trainer/fsdp_sft_trainer.py
+- ⏳ TODO: (zhangchi.usc1992) (line 16)
+- ⏳ TODO: add checkpoint manager (line 77)
+- ⏳ TODO: (zhangchi.usc1992): (line 140)
+- ⏳ TODO: Implement model loading with proper initialization context (line 159)
+- ⏳ TODO: Add support for different model types and configurations (line 160)
+- ⏳ TODO: Implement memory-efficient model loading for large models (line 161)
+- ⏳ TODO: Add model validation and compatibility checks (line 162)
+- ⏳ TODO: Complete model loading implementation (line 165)
+- ⏳ TODO: Add support for custom model architectures (line 166)
+- ⏳ TODO: Implement proper dtype and attention configuration (line 167)
+- ⏳ TODO: Implement gradient checkpointing configuration (line 170)
+- ⏳ TODO: Add memory usage optimization strategies (line 171)
+- ⏳ TODO: Configure mixed precision training settings (line 172)
+- ⏳ TODO: Implement FSDP sharding and wrapping policies (line 173)
+- ⏳ TODO: Add CPU offloading configuration for memory optimization (line 174)
+- ⏳ TODO: Set up distributed training parameters properly (line 175)
+- ⏳ TODO: Initialize FSDP wrapped model (line 178)
+- ⏳ TODO: add a unified tracking (line 301)
+- ⏳ TODO: (zhangchi.usc1992) add back checkpoint manager. Currently, it blocks when uploading to hdfs. So very slow. (line 318)
 
-- **Testing**: Add smaller page sizes when flash-attention PR #824 is merged (luffy/test.py:1590)
-- **Evaluation**: Complete partial HACK implementations in oat_math_grader.py (lines 1023, 1048, 1075)
-- **Protocol**: Various minor tensor operation optimizations and consistency checks
+#### luffy/verl/verl/trainer/main_ppo.py
+- ⏳ TODO: Implement reward computation for different data sources (line 50)
+- ⏳ TODO: Add support for parallel processing of reward computation (line 53)
+- ⏳ TODO: Implement proper sequence decoding and validation (line 54)
+- ⏳ TODO: Add thread-safe logging and debugging functionality (line 55)
+- ⏳ TODO: Optimize memory usage for large batch processing (line 56)
+- ⏳ TODO: Extract and validate prompt and response sequences (line 62)
+- ⏳ TODO: Decode sequences to text format (line 63)
+- ⏳ TODO: Apply appropriate reward function based on data source (line 64)
+- ⏳ TODO: Handle edge cases and error conditions (line 65)
+- ⏳ TODO: Implement batch-wise reward computation (line 70)
+- ⏳ TODO: Add proper error handling and validation (line 71)
+
+### ✅ Already Completed Items
+- ✅ **OpenAI API Integration**: Full client initialization with exponential backoff retry logic (luffy/deepscaler/utils.py)
+- ✅ **Batch Dimension Operations**: fold_batch_dim/unfold_batch_dim fully implemented (luffy/verl/verl/protocol.py)
